@@ -1,0 +1,111 @@
+.header {
+  height: 5vh;
+  display: flex;
+  align-items: center;
+  padding: 4rem 2rem 0rem 2rem;
+  position: relative;
+}
+@media only screen and (max-width: 25em) {
+  .header {
+    flex-wrap: wrap;
+    padding-top: 1rem;
+  }
+}
+.header .img-box {
+  height: 7rem;
+  width: 7rem;
+  border-radius: 50%;
+  background-color: #ffffff;
+  box-shadow: 0.1rem 0.1rem 0.4rem rgba(0, 0, 0, 0.2), -0.1rem -0.1rem 0.4rem rgba(0, 0, 0, 0.2);
+}
+.header .img-box .img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+  border-radius: 50%;
+}
+.header .list {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+@media only screen and (max-width: 25em) {
+  .header .list {
+    flex: 0 0 100%;
+    margin: 1rem 0rem 2rem 0rem;
+    justify-content: space-between;
+  }
+}
+.header .list .active {
+  border-bottom: 0.3rem solid currentColor;
+}
+.header .list .item {
+  margin-left: 2rem;
+}
+.header .list .item .link {
+  text-decoration: none;
+  text-transform: capitalize;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+}
+.header .list .item .link .icon:not(:last-child) {
+  margin-right: 0.5rem;
+}
+.header .list .item .link .icon:last-child {
+  margin-left: 0.5rem;
+}
+.header .list .item .link:hover {
+  color: #1153b8;
+}
+.header .contact-box {
+  position: absolute;
+  top: 150%;
+  right: 0%;
+  z-index: 20;
+  background-color: #ffffff;
+  box-shadow: 0.1rem 0.1rem 0.4rem rgba(0, 0, 0, 0.25);
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (max-width: 57em) {
+  .header .contact-box {
+    right: 2rem;
+  }
+}
+@media only screen and (max-width: 25em) {
+  .header .contact-box {
+    top: 12rem;
+  }
+}
+.header .contact-box .list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+.header .contact-box .list > *:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.header .contact-box .list .item {
+  display: flex;
+  align-items: center;
+  margin-left: 0rem;
+}
+.header .contact-box .list .item span {
+  margin-right: 0.5rem;
+}
+.header .contact-box .list .item .link {
+  display: flex;
+  align-items: center;
+}
+.header .contact-box .list .item .link .icon {
+  margin-right: 0.5rem;
+}/*# sourceMappingURL=Header.css.map */

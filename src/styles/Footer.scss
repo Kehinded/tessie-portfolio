@@ -1,0 +1,106 @@
+.footer-section{
+    background-color: rgba(0,0,0, .8) ;
+    padding: 2rem 0rem 2rem 0rem;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+  
+    .text{
+        text-align: center;
+        text-transform: capitalize;
+        font-size: 3rem;
+        font-weight: bolder;
+        background-image: linear-gradient(180deg, #ecf0f3 0%, #ecf0f3 40%, #1153b8 60%,
+        #2a384d 60%);
+         -webkit-background-clip: text;
+         background-clip: text;
+         color: transparent;
+    }
+
+    .list{
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+        grid-gap: 3rem;
+        justify-items: center;
+        margin: 3rem 0rem;
+
+        @media only screen and (max-width: 38em){
+            grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); 
+            }
+
+        .item{
+            position: relative;    
+            span{
+                position: absolute;
+                top: -150%;
+                left: 50%;
+                z-index: 200;
+                transform: translateX(-50%);
+                padding: .4rem;
+                color: #ffffff;
+                width: 20rem;
+                font-size: 1.4rem;
+                font-weight: bold;   
+            }
+            .link{
+                color: var(--home-primary-color-dark);
+                text-decoration: none;
+                &:hover .icon{
+                    transform: scale(2.5) translateY(-.1rem);
+                    color:  #ffffff;
+                }
+                &:hover  .info{
+                    display: flex;
+                }
+
+                .info{
+                    background-color: #ffffff;
+                    box-shadow: .1rem .1rem .4rem rgba(0,0,0, .1);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #2a384d;
+                    padding: .4rem;
+                    position: absolute;
+                    bottom: -180%;
+                    left: 50%;
+                    z-index: 200;
+                    width: 15rem;
+                    font-weight: bold;
+                    transform: translateX(-50%);
+                    font-size: 1.2rem;
+                    text-transform: capitalize;
+                    display: none;   
+                }
+
+                .icon{
+                    transform: scale(2);
+                    transition: all .3s;
+                    
+                   
+                }
+            }
+        }
+    }
+
+    .copy-right{
+        display: flex;
+        text-transform: uppercase;
+        align-self: center;
+        font-weight: bolder;
+        margin-bottom: 1rem;
+
+        .text-1{
+            margin-left: 1rem;
+            letter-spacing: .3rem;
+        }
+
+        .text-2{
+            margin-left: 1.5rem;
+            color: #a39494 ;
+            word-spacing: 1rem;
+            letter-spacing: .3rem;
+        }
+    }
+}

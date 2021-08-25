@@ -1,0 +1,48 @@
+.about-section{
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media only screen and (max-width: 50em){
+        margin-top: 5rem;
+    }
+
+    @media only screen and (max-width: 38em){
+        margin-bottom: 2rem;    
+    }
+
+    .title{
+        text-align: center;
+
+        @media only screen and (max-width: 38em){
+            font-size: 2rem;
+            padding: 1rem 2rem;
+        }
+        @media only screen and (max-width: 25em){
+            margin-top: 2rem;
+            width: 95%; 
+        }
+        .name{
+            color: #29b629;   
+            display: inline-block; 
+            // width: 20rem;    
+            
+            // span{
+            //     // width: 15rem;
+            // }
+        }
+    }
+    .text{
+        width: 40rem;
+         text-align: center;
+         
+    @media only screen and (max-width: 25em){   
+        width: 95%;
+    }
+    }
+
+    @media only screen and (max-width: 25em){   
+        padding: 1rem 2rem;   
+    }
+}

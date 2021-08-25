@@ -1,13 +1,62 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;1,800&display=swap');
+
+
+*,
+*::after,
+*::before{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: inherit;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* :root {
+  --home-primary-color-light: #73f3ed;
+  --home-primary-color-dark: #3aafa9;
+  --home-secondary-color-light: #204755;
+  --home-secondary-color-dark:  #17252a;
+} */
+
+
+html{
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+
+
+body {
+  position: relative;
+  font-size: 1.4rem;
+  color: rgba(0,0,0, .85) ;
+  display: grid;
+   grid-template-columns: [full-start] minmax(7rem, 1fr) [col-start] repeat(8, minmax(min-content, 16rem)) [col-end] minmax(7rem, 1fr) [full-end];
+    grid-template-rows: min-content ;
+  font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
+}
+
+#root{
+  grid-column: col-start / col-end;
+  min-height: 100vh;
+}            
+
+@media only screen and (max-width: 75em){
+  html{
+    font-size: 55%;
+  }
+}
+
+@media only screen and (max-width: 72em){
+  body{
+    grid-template-columns: [full-start] minmax(3rem, 1fr) [col-start] repeat(8, minmax(min-content, 16rem)) [col-end] minmax(3rem, 1fr) [full-end];
+  }
+}
+
+@media only screen and (max-width: 57em){
+  
+  #root{
+    grid-column: full-start / full-end;
+    overflow-x: hidden;   
+  }            
+  
 }
